@@ -1,3 +1,6 @@
 * 3 juli 2020  
   * diskusi tahapan pengerjaan
   * menentukan tahapan pengerjaan yang akan digunakan  
+* 4 juli 2020  
+  * diskusi abstraksi pembuatan kombinasi
+  * implementasi sedikit

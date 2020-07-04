@@ -187,4 +187,78 @@ void ViewTree(addrsNbt T, int H) {
 }
 
 
+//masih acak acakan :v
+#define MAXCHAR 1000
+void kombinasi() {		// maksimum jumlah itemset = 4
+    FILE *fp;		
+    char str[MAXCHAR];	//penampung text file
+    char* filename = "test.txt"; //file yg dituju
+ 
+    fp = fopen(filename, "r"); //membuka file
+    if (fp == NULL){ //check jika gagal
+        printf("Could not open file %s",filename);
+        return 1;
+    }
+    
+    fgets(str, MAXCHAR, fp); //fp dimasukkan kedalam str
+    int i=strlen(str),j=0; //penampung buat perulangan doang
+
+
+
+	//untuk membuat list kombinasi item dan juga menghitung support
+	//blom jadi
+	//level 1
+	i=strlen(str),j=0; //penampung buat perulangan doang
+	for(j,i,j++){
+    	if(str[j]=='{'){
+    	while (str[j] != '}'){
+    		if (str[j] == ','){
+    	    return;
+    		}
+    		j++;
+			}
+			//Insertlist  //insert kedalam list
+		}	
+	}
+	//level 2
+	i=strlen(str),j=0; //penampung buat perulangan doang
+	for(j,i,j++){
+    	if(str[j]=='{'){
+    		while (str[j] != '}'){
+    	    //Insertlist  //insert kedalam list
+    		j++;
+			}
+		}	
+	}
+	//level 3
+	i=strlen(str),j=0; //penampung buat perulangan doang
+	for(j,i,j++){
+    	if(str[j]=='{'){
+    	while (str[j] != '}'){
+    	    //Insertlist  //insert kedalam list
+    		j++;
+			}
+		}	
+	}
+	//level 4
+	i=strlen(str),j=0; //penampung buat perulangan doang
+	for(j,i,j++){
+    	if(str[j]=='{'){
+    		while (str[j] != '}'){
+    	    //Insertlist  //insert kedalam list
+    		j++;
+			}
+		}	
+	}
+	
+	
+	
+	//setelah tree dibuat dan list dibuat
+	//hitung support
+	
+    
+   
+}
+
+
 #endif
