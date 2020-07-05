@@ -13,10 +13,11 @@ Compiler	: Dev C++
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <string.h>
 #include "boolean.h"
 
 /*	============================== DEKLARASI ==============================  */
-typedef char infotypeNbt;
+typedef char infotypeNbt[4];
 typedef struct nodeNbt *addrsNbt;
 typedef struct nodeNbt{
 	infotypeNbt info;
@@ -61,7 +62,5 @@ void Inorder(nbtType T);
 void PrintNbt(nbtType T);
 /*	menampilkan visuali dari nbt T*/
 
-//percobaan bikin tree kombin
-void kombin(char item[], int nItem, int position, nbtType *T);
 #endif
 

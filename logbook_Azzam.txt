@@ -2,3 +2,12 @@
   - diskusi tahapan pengerjaan
   - menentukan tahapan pengerjaan yang akan digunakan  
   
+* 4 juli 2020  
+  - diskusi abstraksi  
+  - menyempurnakan pembuatan tree kombin  
+
+* 5 juli 2020
+  - membuat tree berinfo array of char dari kombinasi 
+    yang mungkin terjadi
+    (masih statis dan masih blum bisa digunakan buat association rule,
+     seengganya buat bayangan kedepannya)
