@@ -12,18 +12,7 @@ Compiler	: Dev C++
 #include "nbtree.h"
 
 int main() {
-	nbtType pohon;
-	
-	pohon= CreateNbt('A');
-	
-	InsertNbt(&pohon, 'A', 'B'); 
-	InsertNbt(&pohon, 'A', 'C');
-	InsertNbt(&pohon, 'A', 'Z');
-	InsertNbt(&pohon, 'C', 'D');
-	InsertNbt(&pohon, 'B', 'E');
-	InsertNbt(&pohon, 'B', 'F');
-	InsertNbt(&pohon, 'B', 'H');
-	InsertNbt(&pohon, 'F', 'G');
+	nbtType pohon= Generate();
 
 	printf("postorder\n");
 	Postorder(pohon);
