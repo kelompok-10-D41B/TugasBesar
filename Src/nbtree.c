@@ -28,7 +28,8 @@ addrsNbt AlokasiNbt(infotypeNbt X) {
 	
 	newnode= (addrsNbt)malloc(sizeof(nodeNbt));
 	if(newnode!=NULL) { //alokasi berhasil
-		newnode->info= X;
+		
+		strcpy(newnode->info, X);
 		newnode->pr= NULL;
 		newnode->fs= NULL;
 		newnode->nb= NULL;
@@ -174,7 +175,7 @@ void ViewTree(addrsNbt T, int H) {
 		for(i=1;i<=H;i++) {
 			printf("    ");
 		}
-		printf("%c\n", T->info);
+		puts(T->info);
 		
 		if(T->fs!=NULL) {
 			T= T->fs->nb;
@@ -261,22 +262,5 @@ void ViewTree(addrsNbt T, int H) {
 //}
 
 //ini jadi modu internal nbtree.c, gabisa di akses di main, buat rekursif tree
-void kombin(char item[], int nItem, int position, nbtType *T);
-
-nbtType Generate() {
-	char test[4]= "1234";	//misal dulu aja
-	nbtType cektree= CreateNbt('\0');	//root = NULL
-	kombin(test, 4, 0, &cektree->fs);
-	return cektree;
-}
-
-//nItem, startposition, T
-void kombin(char item[], int nItem, int position, nbtType *T) {
-	if(position < nItem) {		//konsepnya preorder
-		*T= CreateNbt(item[position]);
-		kombin(item, nItem, position+1, &(*T)->fs);
-		kombin(item, nItem, position+1, &(*T)->nb);
-	} 
-}
 
 #endif

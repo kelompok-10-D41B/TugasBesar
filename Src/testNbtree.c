@@ -14,12 +14,7 @@ Compiler	: Dev C++
 int main() {
 	nbtType pohon= Generate();
 
-	printf("postorder\n");
-	Postorder(pohon);
-	printf("preorder\n");
-	Preorder(pohon);
-	printf("inorder\n");
-	Inorder(pohon); 
+
 	
 	PrintNbt(pohon);
 	return 0;
