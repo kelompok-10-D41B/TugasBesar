@@ -61,5 +61,7 @@ void Inorder(nbtType T);
 void PrintNbt(nbtType T);
 /*	menampilkan visuali dari nbt T*/
 
+//percobaan bikin tree kombin
+void kombin(char item[], int nItem, int position, nbtType *T);
 #endif
 
