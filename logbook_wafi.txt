@@ -4,3 +4,6 @@
 * 4 juli 2020  
   * diskusi abstraksi pembuatan kombinasi
   * implementasi sedikit
+* 6 juli 2020  
+  * implementasi abstrak punya azzam dengan menggunakan
+    list+inputtan levelorder tapi masih gagal

@@ -21,15 +21,15 @@ void InorderRekursif(addrsNbt X);
 void ViewTree(addrsNbt T, int H);
 
 /*	============================= KONSTRUKTOR =============================  */
-addrsNbt AlokasiNbt(infotypeNbt X) {
+addrsNbt AlokasiNbt(infotypeNbtt X) {
 /*	return address hasil alokasi yang bernilai X, jika alokasi gagal artinya 
 	memori pernuh maka return NULL  */
 	addrsNbt newnode;
 	
 	newnode= (addrsNbt)malloc(sizeof(nodeNbt));
 	if(newnode!=NULL) { //alokasi berhasil
-		
-		strcpy(newnode->info, X);
+		newnode->info=NULL;
+		newnode->queue=x;
 		newnode->pr= NULL;
 		newnode->fs= NULL;
 		newnode->nb= NULL;
@@ -39,7 +39,7 @@ addrsNbt AlokasiNbt(infotypeNbt X) {
 	}
 }
 
-nbtType CreateNbt(infotypeNbt X) {
+nbtType CreateNbt(infotypeNbtt X) {
 /*	inisialisasi, return non binary tree yang berisi 1 node X (sebagai root)  */
 	addrsNbt root= AlokasiNbt(X);
 	
@@ -175,7 +175,7 @@ void ViewTree(addrsNbt T, int H) {
 		for(i=1;i<=H;i++) {
 			printf("    ");
 		}
-		puts(T->info);
+		puts(T->queue);
 		
 		if(T->fs!=NULL) {
 			T= T->fs->nb;

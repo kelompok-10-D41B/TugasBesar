@@ -17,10 +17,12 @@ Compiler	: Dev C++
 #include "boolean.h"
 
 /*	============================== DEKLARASI ==============================  */
+typedef queue infotypeNbtt[5];
 typedef char infotypeNbt[4];
 typedef struct nodeNbt *addrsNbt;
 typedef struct nodeNbt{
 	infotypeNbt info;
+	infotypeNbtt queue;
 	addrsNbt pr;  //parent
 	addrsNbt fs;  //firstson
 	addrsNbt nb;  //nextbrother
