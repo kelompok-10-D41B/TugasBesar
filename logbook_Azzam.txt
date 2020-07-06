@@ -11,3 +11,6 @@
     yang mungkin terjadi
     (masih statis dan masih blum bisa digunakan buat association rule,
      seengganya buat bayangan kedepannya)
+* 6 juli 2020
+  - update abstrak agar lebih rinci
+    diharapkan jadi mudah difahami untuk implementasi
