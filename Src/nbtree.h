@@ -15,12 +15,14 @@ Compiler	: Dev C++
 #include <stdlib.h>
 #include <string.h>
 #include "boolean.h"
-
+#include"queue.h"
 /*	============================== DEKLARASI ==============================  */
+typedef queue infotypeNbtt;
 typedef char infotypeNbt[4];
 typedef struct nodeNbt *addrsNbt;
 typedef struct nodeNbt{
 	infotypeNbt info;
+	infotypeNbtt queue;
 	addrsNbt pr;  //parent
 	addrsNbt fs;  //firstson
 	addrsNbt nb;  //nextbrother
@@ -29,17 +31,17 @@ typedef struct nodeNbt{
 typedef addrsNbt nbtType;
 
 /*	============================= KONSTRUKTOR =============================  */
-addrsNbt AlokasiNbt(infotypeNbt X);
+addrsNbt AlokasiNbt(infotypeNbtt X);
 /*	return address hasil alokasi yang bernilai X, jika alokasi gagal artinya 
 	memori pernuh maka return NULL  */
 
 void DealokasiNbt(addrsNbt X);
 /*	melepass address pada node*/
 
-nbtType CreateNbt(infotypeNbt X);
+nbtType CreateNbt(infotypeNbtt X);
 /*	inisialisasi, return non binary tree yang berisi 1 node X (sebagai root)  */
 
-void InsertNbt(nbtType *T, infotypeNbt pr, infotypeNbt X);
+void InsertNbt(nbtType *T, infotypeNbt pr, infotypeNbtt X);
 /*	add newnode yang bernilai X pada Nbtree T, T tidak mungkin kosong karena 
 	T sudah terisi minimal 1 node saat CreatNbt, newnode bernilai X di add 
 	sebagai anak dari node yang bernilai pr  */

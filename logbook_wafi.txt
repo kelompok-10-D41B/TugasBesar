@@ -8,3 +8,5 @@
   * implementasi sedikit abstak dari azzam dengan menggunakan list dan
     juga dengan cara level order dan mengganti isi node menggunakan queue
     tetapi masih gagal
+* 7 juli 2020  
+  * masih implementasi

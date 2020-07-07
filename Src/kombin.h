@@ -15,8 +15,17 @@ Compiler	: Dev C++
 #include <string.h>
 #include <math.h>
 #include "nbtree.h"
-
+#define jml_barang 5
 //percobaan bikin tree kombin
 nbtType Generate();
+
+
+typedef struct {
+	char * namaBarang;
+}list;
+//deklarasi
+list barang[jml_barang];
+
+nbtType Generate_levelorder(list *barang);
 
 #endif
