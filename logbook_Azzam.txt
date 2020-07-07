@@ -14,3 +14,7 @@
 * 6 juli 2020
   - update abstrak agar lebih rinci
     diharapkan jadi mudah difahami untuk implementasi
+* 7 juli 2020
+  - meneruskan hasil percobaan wafi untuk mengimplemetasikan abstraksi
+  - mengubah queue statis menjadi dinamis
+  - *masih dalam keadaan error

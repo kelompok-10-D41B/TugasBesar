@@ -5,6 +5,9 @@ Nama		: Azzam Badruz zaman
 Referensi	: ADT nbtree saiful, o4b_NonBinaryTree.pdf (pa ade)
 Tanggal		: 4 juli 2020
 Revisi		: 5
+Edit		: untuk kebutuhan Data Mining Association Rules Dasar
+  oleh		: - Azzam Badruz Zaman (191524064)
+			  - Wafi Khaerun Nashirin (191524064)
 Compiler	: Dev C++
 */
 
@@ -21,15 +24,16 @@ void InorderRekursif(addrsNbt X);
 void ViewTree(addrsNbt T, int H);
 
 /*	============================= KONSTRUKTOR =============================  */
-addrsNbt AlokasiNbt(infotypeNbtt X) {
+addrsNbt AlokasiNbt(infotypeNbt X) {
 /*	return address hasil alokasi yang bernilai X, jika alokasi gagal artinya 
 	memori pernuh maka return NULL  */
 	addrsNbt newnode;
 	
 	newnode= (addrsNbt)malloc(sizeof(nodeNbt));
 	if(newnode!=NULL) { //alokasi berhasil
-		newnode->info[4]='\0'; 
-		newnode->queue=X;
+		newnode->info= X;
+		EnQueue(&newnode->queue, X);
+		newnode->support= 0;
 		newnode->pr= NULL;
 		newnode->fs= NULL;
 		newnode->nb= NULL;

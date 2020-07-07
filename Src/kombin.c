@@ -1,8 +1,8 @@
 /*
 Program		: kombin.c
 Deskripsi	: imlementasi header kombin.h
-Nama		: Azzam Badruz zaman
-			  Wafi Khaerun Nashirin
+Nama		: - Azzam Badruz zaman (191524037)
+			  - Wafi Khaerun Nashirin (191524064)
 Referensi	: 
 Tanggal		: 5 juli 2020
 Revisi		: 1
@@ -13,12 +13,12 @@ Compiler	: Dev C++
 #define KOMBIN_C
 
 #include "kombin.h"
-#include "nbtree.h"
+//#include "nbtree.h"
 
 //ini jadi modu internal nbtree.c, gabisa di akses di main, buat rekursif tree
-//void kombin(char item[], int position, int idx,  nbtType *T, char kombi[]);
+void kombin(char item[], int position, int idx,  nbtType *T, char kombi[]);
 
-/*
+
 nbtType Generate() {
 	puts("tst");
 	char test[4]= "1234";	//misal dulu aja
@@ -41,7 +41,7 @@ void kombin(char item[], int position, int idx, nbtType *T, char kombi[]) {
 	} 
 }
 
-*/
+
 
 
 void kombin_levelorder(char penampung[], int position, int idx, nbtType *T);

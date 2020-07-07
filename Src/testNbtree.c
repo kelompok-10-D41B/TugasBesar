@@ -7,11 +7,12 @@ Tanggal		:
 Revisi		: 
 Compiler	: Dev C++
 */
-\
+
 #include <stdio.h>
-#include "nbtree.h"
-#include "queue.h"
 #include "kombin.h"
+//dah include di kombin.h
+//#include "nbtree.h"	
+//#include "queue.h"
 
 
 int main() {
