@@ -12,7 +12,7 @@ Compiler	: Dev C++
 #define NBTREE_C
 
 #include "nbtree.h"
-#include"queue.h"
+
 
 /*	------------------------------ REKURSIF -------------------------------  */
 void PostorderRekursif(addrsNbt X);
@@ -21,15 +21,15 @@ void InorderRekursif(addrsNbt X);
 void ViewTree(addrsNbt T, int H);
 
 /*	============================= KONSTRUKTOR =============================  */
-addrsNbt AlokasiNbt(infotypeNbtt X) {
+addrsNbt AlokasiNbt(infotypeNbt X) {
 /*	return address hasil alokasi yang bernilai X, jika alokasi gagal artinya 
 	memori pernuh maka return NULL  */
 	addrsNbt newnode;
 	
 	newnode= (addrsNbt)malloc(sizeof(nodeNbt));
 	if(newnode!=NULL) { //alokasi berhasil
-		newnode->info[4]='\0'; 
-		newnode->queue=X;
+		
+		strcpy(newnode->info, X);
 		newnode->pr= NULL;
 		newnode->fs= NULL;
 		newnode->nb= NULL;
@@ -39,7 +39,7 @@ addrsNbt AlokasiNbt(infotypeNbtt X) {
 	}
 }
 
-nbtType CreateNbt(infotypeNbtt X) {
+nbtType CreateNbt(infotypeNbt X) {
 /*	inisialisasi, return non binary tree yang berisi 1 node X (sebagai root)  */
 	addrsNbt root= AlokasiNbt(X);
 	
@@ -55,7 +55,7 @@ void DealokasiNbt(addrsNbt X) {
 	free(X);
 }
 
-void InsertNbt(nbtType *T, infotypeNbt pr, infotypeNbtt X) {
+void InsertNbt(nbtType *T, infotypeNbt pr, infotypeNbt X) {
 /*	add newnode yang bernilai X pada Nbtree T, T tidak mungkin kosong karena 
 	T sudah terisi minimal 1 node saat CreatNbt, newnode bernilai X di add 
 	sebagai anak dari node yang bernilai pr  */
@@ -175,7 +175,7 @@ void ViewTree(addrsNbt T, int H) {
 		for(i=1;i<=H;i++) {
 			printf("    ");
 		}
-		Tampil(T->queue);
+		puts(T->info);
 		
 		if(T->fs!=NULL) {
 			T= T->fs->nb;
