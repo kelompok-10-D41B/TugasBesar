@@ -11,10 +11,27 @@
     yang mungkin terjadi
     (masih statis dan masih blum bisa digunakan buat association rule,
      seengganya buat bayangan kedepannya)
+
 * 6 juli 2020
   - update abstrak agar lebih rinci
     diharapkan jadi mudah difahami untuk implementasi
+
 * 7 juli 2020
   - meneruskan hasil percobaan wafi untuk mengimplemetasikan abstraksi
   - mengubah queue statis menjadi dinamis
   - *masih dalam keadaan error
+
+* 8 juli 2020
+  - masih mencoba implemetasi linklist/queue yang menimpan masing-masing
+    kombinasi di tree (misal di 1 element 1, 2, 3, di dua element 12, 13, 23
+    dimana element yang lebih dari satu disimpan di linklist/queue)
+
+* 9 juli 2020
+  - masih gagal implementasi kendalanya sulit membedakan keadaan ketika
+    rekursif firstson dan nextbrother
+    *sebenarnya bisa tapi memerlukan 5 parameter yang tentunya tidak baik
+     untuk digunakan
+
+* 10 juli 2020
+  - kembali ke abstrak awal yang menggunakan string
+
