@@ -16,22 +16,8 @@ Compiler	: Dev C++
 #include <string.h>
 #include <math.h>
 #include "nbtree.h"
-#include "queue.h"
-
-#define jml_barang 5
-typedef struct {
-	char * kombinasi;
-	int support;
-} kombinType;
-
-typedef qType qKombin;
 
 //percobaan bikin tree kombin
 nbtType Generate();
-
-//deklarasi
-list barang[jml_barang];
-
-nbtType Generate_levelorder(list *barang);
 
 #endif

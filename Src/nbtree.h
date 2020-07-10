@@ -18,16 +18,12 @@ Compiler	: Dev C++
 #include <stdlib.h>
 #include <string.h>
 #include "boolean.h"
-#include "kombin.h"
-#include"queue.h"
+
 /*	============================== DEKLARASI ==============================  */
-typedef queue infotypeNbtt;
-typedef char infotypeNbt;
+typedef char infotypeNbt[4];
 typedef struct nodeNbt *addrsNbt;
 typedef struct nodeNbt{
-	infotypeNbt info;  //sebagai pengenal node
-	qKombin queue;  //kombinasi
-	int support;  //support dari kombinasi pada node
+	infotypeNbt info;
 	addrsNbt pr;  //parent
 	addrsNbt fs;  //firstson
 	addrsNbt nb;  //nextbrother
@@ -43,10 +39,10 @@ addrsNbt AlokasiNbt(infotypeNbt X);
 void DealokasiNbt(addrsNbt X);
 /*	melepass address pada node*/
 
-nbtType CreateNbt(infotypeNbtt X);
+nbtType CreateNbt(infotypeNbt X);
 /*	inisialisasi, return non binary tree yang berisi 1 node X (sebagai root)  */
 
-void InsertNbt(nbtType *T, infotypeNbt pr, infotypeNbtt X);
+void InsertNbt(nbtType *T, infotypeNbt pr, infotypeNbt X);
 /*	add newnode yang bernilai X pada Nbtree T, T tidak mungkin kosong karena 
 	T sudah terisi minimal 1 node saat CreatNbt, newnode bernilai X di add 
 	sebagai anak dari node yang bernilai pr  */
