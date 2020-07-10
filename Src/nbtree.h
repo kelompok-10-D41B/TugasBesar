@@ -5,6 +5,9 @@ Nama		: Azzam Badruz zaman
 Referensi	: ADT nbtree saiful
 Tanggal		: 3 juli 2020
 Revisi		: 4
+Edit		: untuk kebutuhan Data Mining Association Rules Dasar
+  oleh		: - Azzam Badruz Zaman (191524037)
+			  - Wafi Khaerun Nashirin (191524064)
 Compiler	: Dev C++
 */
 

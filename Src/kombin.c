@@ -1,8 +1,8 @@
 /*
 Program		: kombin.c
 Deskripsi	: imlementasi header kombin.h
-Nama		: Azzam Badruz zaman
-			  Wafi Khaerun Nashirin
+Nama		: - Azzam Badruz zaman (191524037)
+			  - Wafi Khaerun Nashirin (191524064)
 Referensi	: 
 Tanggal		: 5 juli 2020
 Revisi		: 1
