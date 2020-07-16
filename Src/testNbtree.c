@@ -9,7 +9,15 @@ Compiler	: Dev C++
 */
 
 #include <stdio.h>
+<<<<<<< HEAD
 #include "nbtree.h"
+=======
+#include "kombin.h"
+//dah include di kombin.h
+//#include "nbtree.h"	
+//#include "queue.h"
+
+>>>>>>> Origin/Azzambz
 
 int main() {
 	nbtType pohon= Generate();

@@ -5,6 +5,9 @@ Nama		: Azzam Badruz zaman
 Referensi	: ADT nbtree saiful
 Tanggal		: 3 juli 2020
 Revisi		: 4
+Edit		: untuk kebutuhan Data Mining Association Rules Dasar
+  oleh		: - Azzam Badruz Zaman (191524037)
+			  - Wafi Khaerun Nashirin (191524064)
 Compiler	: Dev C++
 */
 
@@ -15,12 +18,25 @@ Compiler	: Dev C++
 #include <stdlib.h>
 #include <string.h>
 #include "boolean.h"
+<<<<<<< HEAD
 
 /*	============================== DEKLARASI ==============================  */
 typedef char infotypeNbt[4];
 typedef struct nodeNbt *addrsNbt;
 typedef struct nodeNbt{
 	infotypeNbt info;
+=======
+#include "kombin.h"
+#include"queue.h"
+/*	============================== DEKLARASI ==============================  */
+typedef queue infotypeNbtt;
+typedef char infotypeNbt;
+typedef struct nodeNbt *addrsNbt;
+typedef struct nodeNbt{
+	infotypeNbt info;  //sebagai pengenal node
+	qKombin queue;  //kombinasi
+	int support;  //support dari kombinasi pada node
+>>>>>>> Origin/Azzambz
 	addrsNbt pr;  //parent
 	addrsNbt fs;  //firstson
 	addrsNbt nb;  //nextbrother
