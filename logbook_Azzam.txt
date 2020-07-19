@@ -41,3 +41,6 @@
 * 18 juli 2020
   - ekspor cara hitung support terutama dengan cara fp-tree
   - tracing code fp-tree sumber dari github
+
+*19 juli 2020
+  - implemetasi array of tries
