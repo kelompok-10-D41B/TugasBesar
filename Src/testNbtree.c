@@ -9,16 +9,13 @@ Compiler	: Dev C++
 */
 
 #include <stdio.h>
-#include "nbtree.h"
-#include "list.h"
+#include "kombin.h"
 
 int main() {
-	LIST barang[100];
-	nbtType pohon= Generate();
-	PrintNbt(pohon);
+	Generate();
+//	PrintNbt(pohon);
 	
 	
-	levelordertraversal (pohon,barang,0);
 	
 	return 0;
 }
