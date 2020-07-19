@@ -32,8 +32,9 @@ addrsNbt AlokasiNbt(infotypeNbt X) {
 	newnode= (addrsNbt)malloc(sizeof(nodeNbt));
 	if(newnode!=NULL) { //alokasi berhasil
 		
+		newnode->info= malloc(sizeof(X));
 		strcpy(newnode->info, X);
-		newnode->pr= NULL;
+		newnode->support= 0;
 		newnode->fs= NULL;
 		newnode->nb= NULL;
 		return newnode;
@@ -53,7 +54,6 @@ void DealokasiNbt(addrsNbt X) {
 /*	melepass address pada node*/
 	X->fs= NULL;
 	X->nb= NULL;
-	X->pr= NULL;
 	
 	free(X);
 }
@@ -66,7 +66,6 @@ void InsertNbt(nbtType *T, infotypeNbt pr, infotypeNbt X) {
 	
 	prNode= SearchNodeNbt(*T, pr);	//cari addrss parent dari newNode 
 	if(prNode != NULL) {
-		newNode->pr= prNode;
 		
 		if(prNode->fs == NULL) {	//atur jika fs
 			prNode->fs= newNode;

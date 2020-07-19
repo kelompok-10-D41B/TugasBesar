@@ -4,9 +4,6 @@ Deskripsi	: Implemetasi dari header queue.h
 Nama		: Azzam Badruz zaman
 Tanggal		: 06/07/2020
 Revisi		: 2
-Edit		: untuk kebutuhan Data Mining Association Rules Dasar
-  oleh		: - Azzam Badruz Zaman (191524064)
-			  - Wafi Khaerun Nashirin (191524064)
 Compiler	: Dev C++
 */
 #ifndef QUEUE_C
@@ -63,7 +60,7 @@ void EnQueue(qType *Q, infotypeQ info) {
 		qType temp= GetEndofQ(*Q);
 		temp->next= newNode;
 	}
-	PrintQ(*Q);
+//	PrintQ(*Q);
 }
 
 infotypeQ DeQueue(qType *Q) {
@@ -107,7 +104,7 @@ boolean IsEmptyQ(qType Q) {
 void PrintQ(qType Q) {
 /*	menampilkan isi queue  */
 	while(!IsEmptyQ(Q)) {
-		printf("%c ", Q->info);
+		printf("%d ", Q->info);
 		Q= Q->next;
 	}
 }

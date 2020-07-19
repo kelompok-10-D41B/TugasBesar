@@ -4,9 +4,6 @@ Deskripsi	: Header ADT queue dinamis
 Nama		: Azzam Badruz zaman
 Tanggal		: 06/07/2020
 Revisi		: 2
-Edit		: untuk kebutuhan Data Mining Association Rules Dasar
-  oleh		: - Azzam Badruz Zaman (191524037)
-			  - Wafi Khaerun Nashirin (191524064)
 Compiler	: Dev C++
 */
 
@@ -17,8 +14,9 @@ Compiler	: Dev C++
 #include <stdlib.h>
 #include <assert.h>
 #include "boolean.h"
+#include "nbtree.h"
 
-typedef char infotypeQ;
+typedef nbtType infotypeQ;
 typedef struct nodeQ *addrQ;
 typedef struct nodeQ{
 	infotypeQ info;

@@ -35,3 +35,9 @@
 * 10 juli 2020
   - kembali ke abstrak awal yang menggunakan string
 
+* 17 juli 2020
+  - eksplor cara hitung support
+
+* 18 juli 2020
+  - ekspor cara hitung support terutama dengan cara fp-tree
+  - tracing code fp-tree sumber dari github

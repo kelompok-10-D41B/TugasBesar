@@ -20,11 +20,11 @@ Compiler	: Dev C++
 #include "boolean.h"
 
 /*	============================== DEKLARASI ==============================  */
-typedef char infotypeNbt[4];
+typedef char * infotypeNbt;
 typedef struct nodeNbt *addrsNbt;
 typedef struct nodeNbt{
 	infotypeNbt info;
-	addrsNbt pr;  //parent
+	int support; 
 	addrsNbt fs;  //firstson
 	addrsNbt nb;  //nextbrother
 }nodeNbt;
