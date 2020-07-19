@@ -9,21 +9,16 @@ Compiler	: Dev C++
 */
 
 #include <stdio.h>
-<<<<<<< HEAD
 #include "nbtree.h"
-=======
-#include "kombin.h"
-//dah include di kombin.h
-//#include "nbtree.h"	
-//#include "queue.h"
-
->>>>>>> Origin/Azzambz
+#include "list.h"
 
 int main() {
+	LIST barang[100];
 	nbtType pohon= Generate();
-
-
-	
 	PrintNbt(pohon);
+	
+	
+	levelordertraversal (pohon,barang,0);
+	
 	return 0;
 }

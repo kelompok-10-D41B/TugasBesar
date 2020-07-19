@@ -9,15 +9,16 @@ Revisi		: 1
 Compiler	: Dev C++
 */
 
-#ifndef KOMBIN_H
-#define KOMBIN_H
+#ifndef LIST_H
+#define LIST_H
 
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
-#include "nbtree.h"
-
 //percobaan bikin tree kombin
-nbtType Generate();
+typedef struct LIST{
+	char *itemset;
+}LIST;
+
 
 #endif

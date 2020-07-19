@@ -31,14 +31,8 @@ addrsNbt AlokasiNbt(infotypeNbt X) {
 	
 	newnode= (addrsNbt)malloc(sizeof(nodeNbt));
 	if(newnode!=NULL) { //alokasi berhasil
-<<<<<<< HEAD
 		
 		strcpy(newnode->info, X);
-=======
-		newnode->info= X;
-		EnQueue(&newnode->queue, X);
-		newnode->support= 0;
->>>>>>> Origin/Azzambz
 		newnode->pr= NULL;
 		newnode->fs= NULL;
 		newnode->nb= NULL;

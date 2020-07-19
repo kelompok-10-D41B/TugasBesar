@@ -10,3 +10,5 @@
     tetapi masih gagal
 * 7 juli 2020  
   * masih implementasi
+* 18&19 juli 2020
+  * membuat kombinasi string

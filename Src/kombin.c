@@ -11,20 +11,14 @@ Compiler	: Dev C++
 
 #ifndef KOMBIN_C
 #define KOMBIN_C
-
+#include <stdarg.h>
 #include "kombin.h"
-<<<<<<< HEAD
+#include "list.h"
 
 
-//ini jadi modu internal nbtree.c, gabisa di akses di main, buat rekursif tree
-void kombin(char item[], int position, int idx,  nbtType *T, char kombi[]);
-=======
-//#include "nbtree.h"
 
 //ini jadi modu internal nbtree.c, gabisa di akses di main, buat rekursif tree
 void kombin(char item[], int position, int idx,  nbtType *T, char kombi[]);
-
->>>>>>> Origin/Azzambz
 
 nbtType Generate() {
 	puts("tst");
@@ -48,78 +42,38 @@ void kombin(char item[], int position, int idx, nbtType *T, char kombi[]) {
 	} 
 }
 
-<<<<<<< HEAD
-=======
+void levelordertraversal (nbtType *T,LIST asd,int b);
+void check_string(nbtType *T,LIST asd,int b);
 
-
-
-void kombin_levelorder(char penampung[], int position, int idx, nbtType *T);
-void first_son(char penampung[], int position, int idx, nbtType *T);
-void next_brother(char penampung[], int position, int idx, nbtType *T);
-//kombinasi item menggunakan list dengan cara levelorder dan juga mengganti char menggunakan queue
-
-nbtType Generate_levelorder(list *list) {
-	puts("test levelorder");
-	char penampung[10];
-	int i=1,j=0;
-	while(list[i].namaBarang != NULL){	//untuk menghitung jumlah item dalam list
-		penampung[j]=i;
-		i++;
+void check_string(nbtType *T,LIST asd,int b){
+	int i=0;
+	while((*T)->info[i] != '\0'){
+	if((*T)->info[i] == '0'){
+		strcat(asd[b].itemset,"susu");
+	}else if((*T)->info[i] =='1'){
+		strcat(asd[b].itemset,"roti");
+	}else if((*T)->info[i] =='2'){
+		strcat(asd[b].itemset,"keju");
+	}else if((*T)->info[i] =='3'){
+		strcat(asd[b].itemset,"coklat");
 	}
-	queue asd;
-	nbtType cektree= CreateNbt(asd);	//root = NULL
-	kombin_levelorder(penampung, 0, 0, &cektree->fs);
+		i++;
+	}	
+	printf("asd");
+
+}
+//LIST KOMBINASI
+void levelordertraversal (nbtType *T,LIST asd,int b) {
+	check_string(T,asd,b);
+	while((*T)->nb !=NULL){
+	levelordertraversal (&(*T)->nb,asd,b+1);
+	}
+	if((*T)->fs != NULL){
+	levelordertraversal (&(*T)->fs,asd,b+1);
+	}
+
 	
-	return cektree;
 }
 
 
-
-void kombin_levelorder(char penampung[], int position, int idx, nbtType *T) {
-	if(idx < strlen(penampung)) {		//konsepnya preorder
-		queue test;
-		int i=0;
-		while(i<idx+1){	//perulangan sebanyak index
-			Insert(&test,penampung[i]); //untuk insert angka kedalam queue
-			i++;
-		}
-		
-		*T= CreateNbt(test);
-		first_son(penampung, position+1, idx+1, &(*T)->fs);
-		next_brother(penampung, position, idx+1, &(*T)->nb);
-	} 
-}
-
-
-void first_son(char penampung[], int position, int idx, nbtType *T) {
-	if(idx < strlen(penampung)) {		//konsepnya preorder
-		queue test;
-		int i=0;
-		while(i<idx+1){ //perulangan sebanyak index
-			Insert(&test,penampung[i]); //untuk insert angka kedalam queue
-		}
-		*T= CreateNbt(test);
-		next_brother(penampung, position, idx+1, &(*T)->nb); //setelah first son dibuat lalu pergi ke next brother
-		first_son(penampung, position+1, idx+1, &(*T)->fs); // lanjut lagi ke first son setelah next brother beres
-	} 
-}
-
-
-void next_brother(char penampung[], int position, int idx, nbtType *T) {
-	if(idx < strlen(penampung)) {		//konsepnya preorder
-		queue test;
-		int i=0; 
-		while(i<idx+1){ //perulangan sebanyak index
-			Insert(&test,penampung[position]); //untuk insert angka kedalam queue
-			Insert(&test,penampung[i]); //untuk insert angka kedalam queue
-			i++;
-		}
-		*T= CreateNbt(test);
-		next_brother(penampung, position, idx+1, &(*T)->nb); //rekursif untuk next brother
-	} 
-}
-
-
-
->>>>>>> Origin/Azzambz
 #endif
